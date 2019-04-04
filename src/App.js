@@ -83,8 +83,8 @@ class App extends Component {
 
   deleteTweet(newText){
     console.log(newText.target.getAttribute('result'));
-    let newTweet = newText.target.getAttribute('result');
-    fetch('https://still-garden-88285.herokuapp.com/draft_tweets/${newTweet}', {
+    let tweets = newText.target.getAttribute('result');
+    fetch('https://still-garden-88285.herokuapp.com/draft_tweets', {
     method: 'DELETE',
     })
     .then(this.setState({isLoaded: true}))
